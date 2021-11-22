@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --bg-color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.watch {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.watch::before,
+.watch-numbers,
+.watch > span,
+.mini-watch::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.watch::before {
+    content: "";
+    width: 93%;
+    height: 93%;
+    border-radius: inherit;
+    z-index: 2;
+    background-color: var(--bg-color);
+}
+
+.watch > span {
+    transform: none;
+    height: 100%;
+    width: 2px;
+    background-color: aqua;
+}
+
+.watch-numbers {
+    z-index: 10;
+    display: flex;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.min, .sec, .msec {
+    display: block;
+    width: 60px;
+    text-align: center;
+}
+
+.mini-watch {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.mini-watch::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: red;
+}
+
+.mini-watch > span {
+    width: 1px;
+    height: 50%;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    transform-origin: center bottom;
+    transform: translateX(-50%) rotateZ(0deg);
+}
+
+.flags {
+    height: 100px;
+    overflow-y: auto;
+    margin: 1rem auto;
+}
