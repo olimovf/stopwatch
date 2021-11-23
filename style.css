@@ -8,7 +8,7 @@
 }
 
 :root {
-    --bg-color: #fff;
+    --bg-color: #f2f2f2;
 }
 
 body {
@@ -90,14 +90,14 @@ body {
 
 .mini-watch::before {
     content: "";
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: inherit;
     background-color: red;
 }
 
 .mini-watch > span {
-    width: 1px;
+    width: 2px;
     height: 50%;
     background-color: red;
     position: absolute;
@@ -110,4 +110,35 @@ body {
     height: 100px;
     overflow-y: auto;
     margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.flag {
+    width: 250px;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1a1afa;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#flag-btn {
+    display: none;
 }
